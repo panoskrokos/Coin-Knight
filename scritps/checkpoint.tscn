@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://eo3tchywfagh"]
+
+[sub_resource type="GDScript" id="GDScript_2ati2"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if body.is_in_group(\"player\"):
+		pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pysf"]
+size = Vector2(3, 20)
+
+[node name="checkpoint" type="Area2D"]
+script = SubResource("GDScript_2ati2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_3pysf")
+
+[node name="respawn" type="Marker2D" parent="."]
+position = Vector2(1, -10)

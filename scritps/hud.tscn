@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqfbfnww08dar"]
+
+[ext_resource type="Script" uid="uid://cygfjhtiy5v66" path="res://hud.gd" id="1_1orns"]
+[ext_resource type="FontFile" uid="uid://cnnd7vx6twcct" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_etm7e"]
+
+[node name="hud" type="CanvasLayer"]
+script = ExtResource("1_1orns")
+
+[node name="coinsum" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_etm7e")
+text = "Coins"
